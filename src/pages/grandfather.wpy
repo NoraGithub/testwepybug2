@@ -1,6 +1,7 @@
 <template>
+  <wxs module="str" src="../mixin/str.wxs"></wxs>
   <view>{{gf}}</view>
-  <fa :id.sync="gf"></fa>
+  <fa :id.sync="str.getID()"></fa>
 </template>
 
 <script>

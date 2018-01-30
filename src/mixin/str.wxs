@@ -1,0 +1,7 @@
+var str = {}
+
+str.getID = function(str) {
+  return 5
+}
+
+module.exports = str
