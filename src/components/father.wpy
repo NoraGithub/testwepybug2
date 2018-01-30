@@ -20,6 +20,5 @@ export default class Father extends wepy.component {
       twoWay: false
     }
   }
-
 }
 </script>

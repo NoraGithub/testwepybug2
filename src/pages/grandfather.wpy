@@ -15,6 +15,5 @@ export default class GrandFather extends wepy.page {
   data = {
     gf: 3
   }
-
 }
 </script>
