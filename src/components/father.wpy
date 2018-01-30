@@ -1,0 +1,25 @@
+<template>
+  <view>{{id}}</view>
+  <son :sid.sync="id"></son>
+</template>
+
+<script>
+import wepy from 'wepy'
+import son from './son'
+
+export default class Father extends wepy.component {
+  data = {
+    id: ''
+  }
+  components = {
+    son
+  }
+  props= {
+    id: {
+      type: String,
+      twoWay: false
+    }
+  }
+
+}
+</script>

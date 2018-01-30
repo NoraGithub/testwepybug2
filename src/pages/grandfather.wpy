@@ -1,0 +1,20 @@
+<template>
+  <view>{{gf}}</view>
+  <fa :id.sync="gf"></fa>
+</template>
+
+<script>
+import wepy from 'wepy'
+import fa from '../components/father'
+
+export default class GrandFather extends wepy.page {
+  config = {}
+  components = {
+    fa
+  }
+  data = {
+    gf: 3
+  }
+
+}
+</script>

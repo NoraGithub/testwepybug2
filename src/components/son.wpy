@@ -1,0 +1,21 @@
+<template>
+  <view>{{sid}}</view>
+  <view id="{{sid}}"></view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Son extends wepy.component {
+  data = {
+    sid: ''
+  }
+  props= {
+    sid: {
+      type: String,
+      twoWay: false
+    }
+  }
+
+}
+</script>
