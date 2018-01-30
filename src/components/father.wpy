@@ -1,6 +1,7 @@
 <template>
   <view>{{id}}</view>
-  <son :sid.sync="id"></son>
+  <son1 :sid.sync="id"></son1>
+  <son2 :sid.sync="dd"></son2>
 </template>
 
 <script>
@@ -9,15 +10,22 @@ import son from './son'
 
 export default class Father extends wepy.component {
   data = {
-    id: ''
+    id: '',
+    dd: ''
   }
   components = {
-    son
+    son1: son,
+    son2: son
   }
   props= {
     id: {
-      type: String,
+      type: [String,Number],
       twoWay: false
+    }
+  }
+  computed = {
+    dd() {
+      return this.id + 1
     }
   }
 }

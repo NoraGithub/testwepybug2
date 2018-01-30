@@ -12,7 +12,7 @@ export default class Son extends wepy.component {
   }
   props= {
     sid: {
-      type: String,
+      type: [String,Number],
       twoWay: false
     }
   }
