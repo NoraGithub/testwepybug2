@@ -1,7 +1,8 @@
 <template>
-  <wxs module="str" src="../mixin/str.wxs"></wxs>
   <view>{{gf}}</view>
-  <fa :id.sync="str.getID()"></fa>
+  <repeat for="{{l}}" key="blockIndex" index="blockIndex" item="url">
+    <fa :id.sync="url"></fa>
+  </repeat>
 </template>
 
 <script>
@@ -14,7 +15,8 @@ export default class GrandFather extends wepy.page {
     fa
   }
   data = {
-    gf: 3
+    gf: 3,
+    l: ['www.xxx.com/1','www.xxx.com/2']
   }
 }
 </script>

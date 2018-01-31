@@ -1,6 +1,6 @@
 <template>
   <view>{{id}}</view>
-  <son1 :sid.sync="id"></son1>
+  <son1 :sid.sync="newid"></son1>
   <son2 :sid.sync="dd"></son2>
 </template>
 
@@ -24,8 +24,11 @@ export default class Father extends wepy.component {
     }
   }
   computed = {
+    newid() {
+      return this.id.split('/')[this.id.split('/').length - 1].trim()
+    },
     dd() {
-      return this.id + 1
+      return this.newid + 1
     }
   }
 }
