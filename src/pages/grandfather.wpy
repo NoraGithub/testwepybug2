@@ -1,7 +1,7 @@
 <template>
   <view>{{gf}}</view>
-  <repeat for="{{l}}" key="blockIndex" index="blockIndex" item="url">
-    <fa :id.sync="url"></fa>
+  <repeat for="{{renderList}}" key="blockIndex" index="blockIndex" item="blockRender">
+    <fa :id.sync="blockRender.url"></fa>
   </repeat>
 </template>
 
@@ -16,7 +16,10 @@ export default class GrandFather extends wepy.page {
   }
   data = {
     gf: 3,
-    l: ['www.xxx.com/1','www.xxx.com/2']
+    renderList: [
+      {url:'www.xxx.com/1'},
+      {url:'www.xxx.com/2'}
+    ]
   }
 }
 </script>
